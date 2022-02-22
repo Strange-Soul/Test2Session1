@@ -8,24 +8,30 @@ int input()
 }
 int find_fibo(int n)
 {
- int i,fibbo,x,y,z;
-  for(i=0;i<n;i++);
-  {
-   z=x+y;
-   i=x;
-   x=y;
-   y=z;
-  }
-  return fibbo;
+ int i,fibo;
+ int x=0;
+  int y=1;
+  for(i=0;i<n;i++)
+    {
+      fibo=y+i-x;
+      x=y;
+      y=fibo;
+    }
+   fibo++;
+  return fibo;
 }
 void output(int n,int fibo)
 {
-  for(int i=0;i<n;i++)
+  printf("Fibonacci Series of %d number is \n",n);
+  for(int i=0;i<n-1;i++)
     {
-      printf("%d,",i);
+      printf("%d \t",i);
+      printf("%d \t",n-1);
     }
-  printf("Fibonacci series %d Numbers is %d \n",n,fibo);
+    
+ printf(" Sum of %d Fibonacci Series is: %d \n",n,fibo);
 }
+ 
 int main()
 {
   int n,result;
