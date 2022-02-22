@@ -1,53 +1,20 @@
-
 (gdb) b main
-Breakpoint 1 at 0x84b: file p3original.c, line 29.
+No symbol table is loaded.  Use the "file" command.
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 1 (main) pending.
 (gdb) r
-Starting program: /home/runner/Test2Session1/a.out 
+Starting program:  
 warning: Error disabling address space randomization: Operation not permitted
-
-Breakpoint 1, main () at p3original.c:29
-29    n=input_number();
-(gdb) s
-input_number () at p3original.c:3
-3   {
+No executable file specified.
+Use the "file" or "exec-file" command.
 (gdb) n
-5     printf("Enter Any Number To Check Whether it is Prime or Not\n");
-(gdb) n
+The program is not being run.
+(gdb) q
+ gcc -g p3original.c
+ ./a.out
 Enter Any Number To Check Whether it is Prime or Not
-6     scanf("%d",&n);
-(gdb) n
-3
-7     return n;
-(gdb) n
-8   }
-(gdb) n
-main () at p3original.c:30
-30    result=is_prime(n);
-(gdb) s
-is_prime (n=3) at p3original.c:12
-12    for(i=1;i<n/2;i++)
-(gdb) p i
-$1 = -1014028257
-(gdb) n
-17    return 0;
-(gdb) p i
-$2 = 1
-(gdb) p is_prime
-$3 = {int (int)} 0x556a698007be <is_prime>
-(gdb) n
-18  }
-(gdb) n
-main () at p3original.c:31
-31    output(n,result);
-(gdb) s
-output (n=3, is_prime=0) at p3original.c:21
-21    if(is_prime==1)
-(gdb) p i
-No symbol "i" in current context.
-(gdb) n
-24      printf("%d is  Prime Number \n",n);
-(gdb) p n
-$4 = 3
+4
+4 is Not Prime number
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -65,13 +32,15 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x84b: file p3original.c, line 29.
+Breakpoint 1 at 0x842: file p3original.c, line 28.
+(gdb) n
+The program is not being run.
 (gdb) r
-Starting program: /home/runner/Test2Session1/a.out 
+Starting program: /home/runner/Test2Session1-7/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p3original.c:29
-29    n=input_number();
+Breakpoint 1, main () at p3original.c:28
+28    n=input_number();
 (gdb) s
 input_number () at p3original.c:3
 3   {
@@ -81,38 +50,75 @@ input_number () at p3original.c:3
 Enter Any Number To Check Whether it is Prime or Not
 6     scanf("%d",&n);
 (gdb) n
-5
+7
 7     return n;
 (gdb) n
 8   }
 (gdb) n
-main () at p3original.c:30
-30    result=is_prime(n);
+main () at p3original.c:29
+29    result=is_prime(n);
 (gdb) s
-is_prime (n=5) at p3original.c:12
-12    for(i=1;i<n/2;i++)
-(gdb) p i
-$1 = -1606274908
+is_prime (n=7) at p3original.c:11
+11    for(int i=2;i<n;i++)
 (gdb) n
-14        if((n%i)==0)
+13        if((n%i)==0)
 (gdb) p i
+$1 = 2
+(gdb) n
+11    for(int i=2;i<n;i++)
+(gdb) p n%i
 $2 = 1
 (gdb) n
-15          return 1;
-(gdb) p n%i
-$3 = 0
+13        if((n%i)==0)
+(gdb) p i
+$3 = 3
 (gdb) n
-18  }
+11    for(int i=2;i<n;i++)
+(gdb) p n%i
+$4 = 1
+(gdb) n
+13        if((n%i)==0)
+(gdb) p i
+$5 = 4
+(gdb) p n%i
+$6 = 3
+(gdb) n
+11    for(int i=2;i<n;i++)
+(gdb) p i
+$7 = 4
+(gdb) n
+13        if((n%i)==0)
+(gdb) p n%i
+$8 = 2
+(gdb) p i
+$9 = 5
+(gdb) n
+11    for(int i=2;i<n;i++)
+(gdb) n
+13        if((n%i)==0)
+(gdb) p i
+$10 = 6
+(gdb) p n%i
+$11 = 1
+(gdb) n
+11    for(int i=2;i<n;i++)
+(gdb) n
+16    return 0;
+(gdb) n
+17  }
+(gdb) n
+main () at p3original.c:30
+30    output(n,result);
+(gdb) s
+output (n=7, is_prime=0) at p3original.c:20
+20    if(is_prime==1)
+(gdb) n
+23      printf("%d is  Prime Number \n",n);
+(gdb) n
+7 is  Prime Number 
+24  }
 (gdb) n
 main () at p3original.c:31
-31    output(n,result);
-(gdb) s
-output (n=5, is_prime=1) at p3original.c:21
-21    if(is_prime==1)
-(gdb) n
-22      printf("%d is Not Prime number\n",n);
-(gdb) n
-5 is Not Prime number
-25  }
+31    return 0;
 (gdb) c
 Continuing.
