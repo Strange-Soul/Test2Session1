@@ -1,1 +1,57 @@
 
+(gdb) b main
+Breakpoint 1 at 0x932: file p1original.c, line 17.
+(gdb) r
+Starting program: /home/runner/Test2Session1-8/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1original.c:17
+17  {
+(gdb) n
+19    input(&a1,&b1,&a2,&b2);
+(gdb) s
+input (x1=0x7ffd1166e314, y1=0x7ffd1166e318, x2=0x7ffd1166e31c, 
+    y2=0x7ffd1166e320) at p1original.c:5
+5     printf("Enter  First Points to find distance\n");
+(gdb) n
+Enter  First Points to find distance
+6     scanf("%f %f %f %f",x1,y1,x2,y2);
+(gdb) n
+1
+1
+2
+2
+7   }
+(gdb) n
+main () at p1original.c:20
+20    find_distance(a1,b1,a2,b2,&result);
+(gdb) s
+find_distance (x1=1, y1=1, x2=2, y2=2, distance=0x7ffd1166e324)
+    at p1original.c:10
+10    *distance=sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+(gdb) p pow((x2-x1),2)
+$1 = 1
+(gdb) p pow((y2-y2),2)
+$2 = 0
+(gdb) p 8distance
+Invalid number "8distance".
+(gdb) p *distance
+$3 = 4.59135442e-41
+(gdb) n
+11  }
+(gdb) p *distance
+$4 = 1.41421354
+(gdb) n
+main () at p1original.c:21
+21    output(a1,b1,a2,b2,result);
+(gdb) s
+output (x1=1, y1=1, x2=2, y2=2, distance=1.41421354) at p1original.c:14
+14    printf("Distance between two points (%f,%f) and (%f,%f) is %f \n",x1,y1,x2,y2,distance);
+(gdb) n
+Distance between two points (1.000000,1.000000) and (2.000000,2.000000) is 1.414214 
+15  }
+(gdb) n
+main () at p1original.c:22
+22    return 0;
+(gdb) c
+Continuing.
