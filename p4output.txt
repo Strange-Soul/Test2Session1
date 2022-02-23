@@ -1,1 +1,11 @@
 
+ gcc -g p4original.c
+ ./a.out
+Enter Any Number To Find Fibonaci series 
+5
+Fibonacci series is 3 
+ ./a.out
+Enter Any Number To Find Fibonaci series 
+8
+Fibonacci series is 13 
+ 
