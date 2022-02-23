@@ -1,4 +1,22 @@
-(gdb) b main
+
+ gcc -g p3original.c
+ ./a.out
+Enter any Number 
+3
+3 is Prime Number 
+ ./a.out
+Enter any Number 
+7
+7 is Prime Number 
+ ./a.out
+Enter any Number 
+2
+2 is Prime Number 
+ ./a.out
+Enter any Number 
+6
+6 is not Prime Number 
+ (gdb) b main
 No symbol table is loaded.  Use the "file" command.
 Make breakpoint pending on future shared library load? (y or [n]) y
 Breakpoint 1 (main) pending.
