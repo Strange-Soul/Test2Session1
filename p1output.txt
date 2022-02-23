@@ -1,4 +1,12 @@
-
+gcc -g p1original.c -lm
+ ./a.out
+Enter  First Points to find distance
+1
+1
+2
+2
+Distance between two points (1.000000,1.000000) and (2.000000,2.000000) is 1.414214 
+ 
 (gdb) b main
 Breakpoint 1 at 0x932: file p1original.c, line 17.
 (gdb) r
