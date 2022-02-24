@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 int input_number()
 {
   int n;
@@ -8,7 +9,7 @@ int input_number()
 }
 int is_prime(int n)
 {
-  for(int i=2;i<n/2;i++)
+  for(int i=2;i<sqrt(n);i++)//sqrt(n)=n/sqrt(n);
     {
       if((n%i)==0)
         return 1;
@@ -17,7 +18,11 @@ int is_prime(int n)
 }
 void output(int n,int is_prime)
 {
-  if(is_prime==1)
+  if(n==0 || n==1)
+  {
+    printf("%d is not a prime number \n",n);
+  }
+  else if(is_prime==1)
   {
     printf("%d is not Prime Number \n",n);
   }
