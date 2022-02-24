@@ -8,4 +8,184 @@ Fibonacci series is 3
 Enter Any Number To Find Fibonaci series 
 8
 Fibonacci series is 13 
- 
+ (gdb) b main
+Breakpoint 1 at 0x833: file p4original.c, line 30.
+(gdb) r
+Starting program: /home/runner/Test2Session1-12/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4original.c:30
+30    n=input();
+(gdb) s
+input () at p4original.c:3
+3   {
+(gdb) n
+5     printf("Enter Any Number To Find Fibonaci series \n");
+(gdb) n
+Enter Any Number To Find Fibonaci series 
+6     scanf("%d",&n);
+(gdb) n
+9
+7     return n;
+(gdb) n
+8   }
+(gdb) n
+main () at p4original.c:31
+31    result=find_fibo(n);
+(gdb) s
+find_fibo (n=9) at p4original.c:12
+12   int x=0;
+(gdb) n
+13    int y=1;
+(gdb) n
+14    for(i=2;i<n;i++)
+(gdb) p i
+$1 = 649243456
+(gdb) n
+16        fibo=x+y;
+(gdb) p fibo
+$2 = 9
+(gdb) n
+17        x=y;
+(gdb) p x
+$3 = 0
+(gdb) p y
+$4 = 1
+(gdb) p fibo
+$5 = 1
+(gdb) n
+18        y=fibo;
+(gdb) n
+14    for(i=2;i<n;i++)
+(gdb) p i
+$6 = 2
+(gdb) p x
+$7 = 1
+(gdb) p y
+$8 = 1
+(gdb) n
+16        fibo=x+y;
+(gdb) n
+17        x=y;
+(gdb) n
+18        y=fibo;
+(gdb) n
+14    for(i=2;i<n;i++)
+(gdb) p y
+$9 = 2
+(gdb) p x
+$10 = 1
+(gdb) p fibo
+$11 = 2
+(gdb) n
+16        fibo=x+y;
+(gdb) n
+17        x=y;
+(gdb) n
+18        y=fibo;
+(gdb) p y
+$12 = 2
+(gdb) p x
+$13 = 2
+(gdb) n
+14    for(i=2;i<n;i++)
+(gdb) p y
+$14 = 3
+(gdb) p x
+$15 = 2
+(gdb) p fibo
+$16 = 3
+(gdb) n
+16        fibo=x+y;
+(gdb) n
+17        x=y;
+(gdb) p fibo
+$17 = 5
+(gdb) p 
+$18 = 5
+(gdb) p x
+$19 = 2
+(gdb) n
+18        y=fibo;
+(gdb) p x
+$20 = 3
+(gdb) n
+14    for(i=2;i<n;i++)
+(gdb) p y
+$21 = 5
+(gdb) p x
+$22 = 3
+(gdb) p fibo
+$23 = 5
+(gdb) n
+16        fibo=x+y;
+(gdb) n
+17        x=y;
+(gdb) p fibo
+$24 = 8
+(gdb) n
+18        y=fibo;
+(gdb) n
+14    for(i=2;i<n;i++)
+(gdb) p i
+$25 = 6
+(gdb) n
+16        fibo=x+y;
+(gdb) p x
+$26 = 5
+(gdb) p y
+$27 = 8
+(gdb) n
+17        x=y;
+(gdb) p x
+$28 = 5
+(gdb) n
+18        y=fibo;
+(gdb) n
+14    for(i=2;i<n;i++)
+(gdb) p x
+$29 = 8
+(gdb) p y
+$30 = 13
+(gdb) p i
+$31 = 7
+(gdb) p fibo
+$32 = 13
+(gdb) n
+16        fibo=x+y;
+(gdb) n
+17        x=y;
+(gdb) n
+18        y=fibo;
+(gdb) p x
+$33 = 13
+(gdb) p fibbo
+No symbol "fibbo" in current context.
+(gdb) p fibo
+$34 = 21
+(gdb) p y
+$35 = 13
+(gdb) n
+14    for(i=2;i<n;i++)
+(gdb) p y
+$36 = 21
+(gdb) n
+21    return fibo;
+(gdb) n
+22  }
+(gdb) n
+main () at p4original.c:32
+32    output(n,result);
+(gdb) s
+output (n=9, fibo=21) at p4original.c:25
+25   printf("Fibonacci series is %d \n",fibo);
+(gdb) n
+Fibonacci series is 21 
+26  }
+(gdb) n
+main () at p4original.c:33
+33    return 0;
+(gdb) n
+34  }
+(gdb) c
+Continuing.
