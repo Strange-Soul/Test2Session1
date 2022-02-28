@@ -19,23 +19,24 @@ Point input_point()
 {
   Point p;
   printf("Enter a Point");
-  scanf("%f %f",p.x,p.y);
+  scanf("%f %f",&p.x,&p.y);
   return p;
 }
 Line input_line()
 {
   Line l;
   printf("Enter the Line \n");
-  scanf("%f %f",l.p1,l.p2);
+  scanf("%f %f",&l.p1,&l.p2);
   return l;
 }
 void find_length(Line *l)
 {
-  l->length=sqrt(pow(())
+  l->l=sqrt(pow(((*l).p2.x2 - (*l).p1.x1),2)+pow(((*l).p2.y2 - (*l).p1.y1),2));
 }
 void output(Line l)
 {
-  printf("Length of Line is %f \n",l.p1,l.p2);
+  printf("Length of Line from the points %f %f and  %f  %f \n",l.p1,l.p2);
+  printf("Length of Line is %f \n",l);
 }
 int main()
 {

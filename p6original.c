@@ -1,8 +1,11 @@
 #include<stdio.h>
-void input_string(char *a)
+#include<string.h>
+void input_string(char *string,char *substring)
 {
   printf("Enter the string \n");
-  scanf("%s",a);
+  scanf("%s",string);
+  printf("Enter the substring \n");
+  scanf("%s",substring);
 }
 int str_reverse(char *string,char *substring)
 {
@@ -10,25 +13,26 @@ int str_reverse(char *string,char *substring)
   for(int i=0;string[i]!='\0';i++);
    for(int j=0;substring[j]!='\0';j++)
      {
-       substring[j]=string[i];
-       i--;
+       if(substring[j] == string[i])
+       {
+         j++;
+         i++;
+         r=j-strlen(substring);
+       }
+      j++;
      }
   return r;
 }
 void output(char *string,char *substring,int index)
 {
-  for(int i=0;string[i]=substring[i];i++)
-  if(index)
-  {
-    printf("%d is index of SubString %s",i,substring);
-  }
+    printf("%d is index of SubString %s \n",index,substring);
 }
 int main()
 {
   int result;
   char s[20];
   char sub_s[20];
-  input_string(s);
+  input_string(s,sub_s);
   result=str_reverse(s,sub_s);
   output(s,sub_s,result);
   return 0;
