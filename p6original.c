@@ -12,8 +12,7 @@ int str_reverse(char *string,char *substring)
   int r,i=0;
   int j;
     while(string[i]!='\0')
-  {
-    ++i;
+  { i++;
     for(int j=0;substring[j]!='\0';j++)
      {
        if(substring[j] == string[i])
@@ -21,7 +20,6 @@ int str_reverse(char *string,char *substring)
          i++;
          r=i-strlen(substring);
        }
-       j++;
      }
   }
   return r;
