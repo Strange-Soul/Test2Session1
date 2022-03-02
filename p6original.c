@@ -11,8 +11,8 @@ int str_reverse(char *string,char *substring)
 {
   int r,i=0;
   int j;
-    while(string[i]!='\0')
-  { i++;
+ for(i=0;string[i]!='\0';i++)
+  { 
     for(int j=0;substring[j]!='\0';j++)
      {
        if(substring[j] == string[i])

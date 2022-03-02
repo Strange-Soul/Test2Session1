@@ -1,1 +1,390 @@
 
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x8e0: file p6original.c, line 32.
+(gdb) r
+Starting program: /home/runner/Test2Session1-17/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p6original.c:32
+32  {
+(gdb) n
+36    input_string(s,sub_s);
+(gdb) s
+input_string (string=0x7ffd97c010b0 "\001", 
+    substring=0x7ffd97c010d0 "P\t\200\002\317U") at p6original.c:5
+5     printf("Enter the string \n");
+(gdb) n
+Enter the string 
+6     scanf("%s",string);
+(gdb) n
+helloworld
+7     printf("Enter the substring \n");
+(gdb) n
+Enter the substring 
+8     scanf("%s",substring);
+(gdb) n
+world
+9   }
+(gdb) n
+main () at p6original.c:37
+37    result=str_reverse(s,sub_s);
+(gdb) s
+str_reverse (string=0x7ffd97c010b0 "helloworld", 
+    substring=0x7ffd97c010d0 "world") at p6original.c:12
+12    int r,i=0;
+(gdb) n
+14   for(i=0;string[i]!='\0';i++)
+(gdb) p i
+$1 = 0
+(gdb) p j
+$2 = <optimized out>
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) p j
+$3 = 21967
+(gdb) p j
+$4 = 21967
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) p j
+$5 = 0
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) p i
+$6 = 0
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) p i
+$7 = 0
+(gdb) p j
+$8 = 1
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) p string[i]
+$9 = 104 'h'
+(gdb) p substring[j]
+$10 = 108 'l'
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) p i
+$11 = 0
+(gdb) p j
+$12 = 3
+(gdb) p string[i]
+$13 = 104 'h'
+(gdb) p string[j]
+$14 = 108 'l'
+(gdb)  n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+14   for(i=0;string[i]!='\0';i++)
+(gdb) p string[i]
+$15 = 104 'h'
+(gdb) p substrig[i]
+No symbol "substrig" in current context.
+(gdb) p string[j]
+value has been optimized out
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) p string[j]
+$16 = 104 'h'
+(gdb) p j
+$17 = 0
+(gdb)  p i
+$18 = 1
+(gdb) p string[i]
+$19 = 101 'e'
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) p substring[i]
+$20 = 111 'o'
+(gdb) p 
+$21 = 111 'o'
+(gdb) p i
+$22 = 1
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+14   for(i=0;string[i]!='\0';i++)
+(gdb) p string[i]
+$23 = 101 'e'
+(gdb) p i
+$24 = 1
+(gdb) p j
+$25 = <optimized out>
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) p j
+$26 = 5
+(gdb) p string[i]
+$27 = 108 'l'
+(gdb) p substring[j]
+$28 = 0 '\000'
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) p substring[j]
+$29 = 119 'w'
+(gdb) p string[i]
+$30 = 108 'l'
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) p i
+$31 = 2
+(gdb) p j
+$32 = 1
+(gdb) p string[j]
+$33 = 101 'e'
+(gdb) p substring[j]
+$34 = 111 'o'
+(gdb) p string[i]
+$35 = 108 'l'
+(gdb) p substring[i]
+$36 = 114 'r'
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) 
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+20           i++;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+21           r=i-strlen(substring);
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+14   for(i=0;string[i]!='\0';i++)
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+20           i++;
+(gdb) n
+21           r=i-strlen(substring);
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) p substring[j]
+$37 = 111 'o'
+(gdb) p j
+$38 = 1
+(gdb) p string[i]
+$39 = 119 'w'
+(gdb) p substring[j]
+$40 = 111 'o'
+(gdb) p r
+$41 = 0
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+14   for(i=0;string[i]!='\0';i++)
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+20           i++;
+(gdb) n
+21           r=i-strlen(substring);
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) np i
+Undefined command: "np".  Try "help".
+(gdb) p i
+$42 = 7
+(gdb) p strlen(substring)
+$43 = (size_t (*)(const char *)) 0x7f787d163400 <__strlen_sse2>
+(gdb) p strlen(substring)
+$44 = (size_t (*)(const char *)) 0x7f787d163400 <__strlen_sse2>
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) p strlen(substring)
+$45 = (size_t (*)(const char *)) 0x7f787d163400 <__strlen_sse2>
+(gdb) n
+20           i++;
+(gdb) n
+21           r=i-strlen(substring);
+(gdb) p i
+$46 = 8
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+20           i++;
+(gdb) n
+21           r=i-strlen(substring);
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+20           i++;
+(gdb) n
+21           r=i-strlen(substring);
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+14   for(i=0;string[i]!='\0';i++)
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+14   for(i=0;string[i]!='\0';i++)
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+14   for(i=0;string[i]!='\0';i++)
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) n
+18         if(substring[j] == string[i])
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) 
+18         if(substring[j] == string[i])
+(gdb) 
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) 
+18         if(substring[j] == string[i])
+(gdb) 
+16      for(int j=0;substring[j]!='\0';j++)
+(gdb) 
+14   for(i=0;string[i]!='\0';i++)
+(gdb) 
+25    return r;
+(gdb) 
+26  }
+(gdb) 
+main () at p6original.c:38
+38    output(s,sub_s,result);
+(gdb) n
+The index of SubString world is 5
+39    return 0;
