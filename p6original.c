@@ -9,23 +9,25 @@ void input_string(char *string,char *substring)
 }
 int str_reverse(char *string,char *substring)
 {
-  int r,i,j;
-  for(int i=0;string[i]!='\0';i++);
-   for(int j=0;substring[j]!='\0';j++)
+  int r,i=0;
+  int j;
+    while(string[i]!='\0')
+  {
+    i++;
+    for(int j=0;substring[j]!='\0';j++)
      {
        if(substring[j] == string[i])
        {
-         j++;
-         i++;
-         r=j-strlen(substring);
+         r=i-strlen(substring);
        }
-      j++;
+       j++;
      }
+  }
   return r;
 }
 void output(char *string,char *substring,int index)
 {
-    printf("%d is index of SubString %s \n",index,substring);
+    printf("The index of SubString %s is %d\n",substring,index);
 }
 int main()
 {
