@@ -12,20 +12,22 @@ void init_array(int n,int a[n])
   for(int i=0;i<n;i++)
     {
       a[i]=i;
-      a[0]=0;
-      a[1]=0;
+      //a[0]=0;
+      //a[1]=0;
     }
 }
 void erotosthenes_sieve(int n,int a[n])
 {
   int i=2;
-  while(i<n/2)
+  while(i<sqrt(n))
     {
       while(a[i]==0)
-        for(int j=2*i;j<n;j+=i)
-          {
-            a[j]=0;
-          }
+        i++;
+      for(int j=i+i;j<n;j+=i)
+        {
+          a[j]=0;
+          a[1]=0;
+        }
       i++;
     }
 }
