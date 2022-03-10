@@ -1,23 +1,51 @@
 #include<stdio.h>
 #include<math.h>
-void input(float *x1,float *y1,float *x2,float *y2)
+int input_array_size()
 {
-  printf("Enter  First Points to find distance\n");
-  scanf("%f %f %f %f",x1,y1,x2,y2);
+  int n;
+  printf("Enter the size of Array \n");
+  scanf("%d",&n);
+  return 0;
 }
-void find_distance(float x1,float y1,float x2,float y2,float *distance)
+void init_array(int n,int a[n])
 {
-  *distance=sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+  //a[0]=0;
+  //a[1]=0;
+  for(int i=2;i<n;i++)
+    {
+      a[i]=i;
+    }
 }
-void output(float x1,float y1,float x2,float y2,float distance)
+void erotosthenes_sieves(int n,int a[n])
 {
-  printf("Distance between two points (%f,%f) and (%f,%f) is %f \n",x1,y1,x2,y2,distance);
+ int i=2;
+  while(i<sqrt(n))
+    while(a[i]='\0')
+      {
+    i++;
+   for(int j=2*i;j<n;j++)
+    {
+      a[j]=0;
+      a[1]=0;
+    }
+    i++;
+   }
+}
+void output(int n,int a[n])
+{
+for(int i=1;i<n;i++)
+    if(a[i]!='\0')
+    {
+     printf("%d",a[i]);
+    }
+  printf("\n");
 }
 int main()
 {
-  float a1,b1,a2,b2,result;
-  input(&a1,&b1,&a2,&b2);
-  find_distance(a1,b1,a2,b2,&result);
-  output(a1,b1,a2,b2,result);
+  int x=input_array_size();
+  int p[x];
+  init_array(x,p);
+  erotosthenes_sieves(x,p);
+  output(x,p);
   return 0;
 }

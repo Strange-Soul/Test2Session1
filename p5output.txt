@@ -1,1 +1,1014 @@
 
+gdb) b main
+Breakpoint 1 at 0x9c7: file p5original.c, line 45.
+(gdb) r
+Starting program: /home/runner/Test2Session1-24/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5original.c:45
+45  {
+(gdb) n
+47    x=input_array_size();
+(gdb) s
+input_array_size () at p5original.c:4
+4   {
+(gdb) n
+6     printf("Enter the size of array \n");
+(gdb) n
+Enter the size of array 
+7     scanf("%d",&n);
+(gdb) n
+50
+8     return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p5original.c:48
+48    int y[x];
+(gdb) n
+49    init_array(x,y);
+(gdb) s
+init_array (n=50, a=0x7ffc56892390) at p5original.c:12
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) p i
+$1 = 0
+(gdb) p *a
+$2 = -1471969088
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) p i
+$3 = 1
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) p a[i]
+$4 = 1
+(gdb) p a[1]
+$5 = 1
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) 
+Undefined command: "nn".  Try "help".
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) np i
+Undefined command: "np".  Try "help".
+(gdb) p i
+$6 = 8
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) 
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) p i
+$7 = 23
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) 
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) 
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) 
+14        a[i]=i;
+(gdb) 
+12    for(int i=0;i<n;i++)
+(gdb) 
+14        a[i]=i;
+(gdb) 
+12    for(int i=0;i<n;i++)
+(gdb) 
+14        a[i]=i;
+(gdb) 
+12    for(int i=0;i<n;i++)
+(gdb) p i
+$8 = 37
+(gdb) 
+$9 = 37
+(gdb) 
+$10 = 37
+(gdb) 
+$11 = 37
+(gdb) 
+$12 = 37
+(gdb) 
+$13 = 37
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) np i
+Undefined command: "np".  Try "help".
+(gdb) p i
+$14 = 43
+(gdb) n
+14        a[i]=i;
+(gdb) 
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) p a[47]
+$15 = -2135216765
+(gdb) p a[41]
+$16 = 41
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) p i
+$17 = 48
+(gdb) n
+14        a[i]=i;
+(gdb) n
+12    for(int i=0;i<n;i++)
+(gdb) n
+18  }
+(gdb) n
+main () at p5original.c:50
+50    erotosthenes_sieve(x,y);
+(gdb) s
+erotosthenes_sieve (n=50, a=0x7ffc56892390) at p5original.c:21
+21    int i=2;
+(gdb) n
+22    while(i<sqrt(n))
+(gdb) p i
+$18 = 2
+(gdb) n
+24        while(a[i]==0)
+(gdb) p sqrt(n)
+$19 = 7.0710678118654755
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p j
+$20 = 50
+(gdb) p i
+$21 = 2
+(gdb) n
+28            a[j]=0;
+(gdb) p j
+$22 = 4
+(gdb) n
+29            a[1]=0;
+(gdb) p a[4]
+$23 = 0
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p j+=1
+$24 = 5
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) p j
+$25 = 7
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) pa[7]
+Ambiguous command "pa[7]": .
+(gdb) p a[7]
+$26 = 0
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) p a[7]
+$27 = 0
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) p j
+$28 = 11
+(gdb) p j+=1
+$29 = 12
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p a[11]
+$30 = 11
+(gdb) p a[12]
+$31 = 0
+(gdb) n
+28            a[j]=0;
+(gdb) p a[j]
+$32 = 14
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) p i
+$33 = 2
+(gdb) p j
+$34 = 16
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p j
+$35 = 16
+(gdb) n
+28            a[j]=0;
+(gdb) p a[16]
+$36 = 0
+(gdb) n
+29            a[1]=0;
+(gdb) p a[j]
+$37 = 0
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) p j
+$38 = 20
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p a[j]
+$39 = 0
+(gdb) n
+28            a[j]=0;
+(gdb) p j
+$40 = 22
+(gdb) p a[j]
+$41 = 22
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) p j
+$42 = 24
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p j
+$43 = 24
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) p a[j]
+$44 = 0
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) p j
+$45 = 28
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p j
+$46 = 30
+(gdb) n
+28            a[j]=0;
+(gdb) p j
+$47 = 32
+(gdb) p a[j]
+$48 = 32
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p a[32]
+$49 = 0
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+28            a[j]=0;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p j
+$50 = 44
+(gdb) n
+28            a[j]=0;
+(gdb) p j
+$51 = 46
+(gdb) p a[46]
+$52 = 46
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) p a[46]
+$53 = 0
+(gdb) n
+28            a[j]=0;
+(gdb) p j
+$54 = 48
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+31        i++;
+(gdb) p a[48]
+$55 = 0
+(gdb) n
+22    while(i<sqrt(n))
+(gdb) n
+24        while(a[i]==0)
+(gdb) p i
+$56 = 3
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+31        i++;
+(gdb) n
+22    while(i<sqrt(n))
+(gdb) n
+24        while(a[i]==0)
+(gdb) 
+25          i++;
+(gdb) 
+24        while(a[i]==0)
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) p i
+$57 = 5
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) p j
+$58 = 45
+(gdb) p a[45]
+$59 = 0
+(gdb) n
+29            a[1]=0;
+(gdb) p a[45]
+$60 = 0
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+31        i++;
+(gdb) p i
+$61 = 5
+(gdb) n
+22    while(i<sqrt(n))
+(gdb) n
+24        while(a[i]==0)
+(gdb) p i
+$62 = 6
+(gdb) n
+25          i++;
+(gdb) n
+24        while(a[i]==0)
+(gdb) n
+25          i++;
+(gdb) n
+24        while(a[i]==0)
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) n
+29            a[1]=0;
+(gdb) n
+26        for(int j=i+i;j<n;j+=i)
+(gdb) n
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+28            a[j]=0;
+(gdb) 
+29            a[1]=0;
+(gdb) 
+26        for(int j=i+i;j<n;j+=i)
+(gdb) 
+31        i++;
+(gdb) p j
+No symbol "j" in current context.
+(gdb) p a[j]
+No symbol "j" in current context.
+(gdb) n
+22    while(i<sqrt(n))
+(gdb) n
+33  }
+(gdb) p i
+$63 = 9
+(gdb) n
+main () at p5original.c:51
+51    output(x,y);
+(gdb) s
+output (n=50, a=0x7ffc56892390) at p5original.c:37
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) p i
+$64 = 1
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) p i
+$65 = 2
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) 
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) 
+38      if(a[i]!='\0')
+(gdb) 
+37    for(i=0;i<n;i++)
+(gdb) 
+38      if(a[i]!='\0')
+(gdb) 
+37    for(i=0;i<n;i++)
+(gdb) 
+38      if(a[i]!='\0')
+(gdb) 
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) 
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) p i
+$66 = 14
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) 
+38      if(a[i]!='\0')
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) 
+Undefined command: "nn".  Try "help".
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+n37   for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) p i
+$67 = 33
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) 
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) 
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) 
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) p i
+$68 = 48
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+38      if(a[i]!='\0')
+(gdb) n
+40        printf("%d ",a[i]);
+(gdb) p i
+$69 = 49
+(gdb) n
+37    for(i=0;i<n;i++)
+(gdb) n
+42    printf("\n");
+(gdb) p i
+$70 = 50
+(gdb) n
+2 3 5 8 11 13 17 19 23 29 31 37 41 43 47 49 
+43  }
+(gdb) n
+main () at p5original.c:52
+52    return 0;
+(gdb) n
+53  }
+(gdb) c
+Continuing.
