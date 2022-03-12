@@ -12,9 +12,9 @@ void reverse_string(char *a)
   j=strlen(a)-1;
   while(i<j)
     {
-      s=a[i];
-      a[i]=a[j];
-      a[j]=s;
+      s=a[i];//s=h,,s=o,l,l,e ,h
+      a[i]=a[j];//a[i]=h=a[j]=o,o=l,l=l,e,h,
+      a[j]=s;//a[j]=o,l,l,e,h
       i++;
       j--;
     }
