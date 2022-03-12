@@ -1,40 +1,33 @@
 #include<stdio.h>
 #include<string.h>
-void input_string(char *string,char *substring)
+void input_string(char *a)
 {
-  printf("Enter the string \n");
-  scanf("%s",string);
-  printf("Enter the substring \n");
-  scanf("%s",substring);
+  printf("Enter the String to Reverse \n");
+  scanf("%s",a);
 }
-int str_reverse(char *string,char *substring)
+void reverse_string(char *a)
 {
-  int r,i=0;
-  int j;
- for(i=0;string[i]!='\0';i++)
-  { 
-    for(int j=0;substring[j]!='\0';j++)
-     {
-       if(substring[j] == string[i])
-       {
-         i++;
-         r=i-strlen(substring);
-       }
-     }
-  }
-  return r;
+  int i,j,s;
+  i=0;
+  j=strlen(a)-1;
+  while(i<j)
+    {
+      s=a[i];
+      a[i]=a[j];
+      a[j]=s;
+      i++;
+      j--;
+    }
 }
-void output(char *string,char *substring,int index)
+void output(char *a)
 {
-    printf("The index of SubString %s is %d\n",substring,index);
+  printf("Reverse of string is %s \n",a);
 }
 int main()
 {
-  int result;
-  char s[20];
-  char sub_s[20];
-  input_string(s,sub_s);
-  result=str_reverse(s,sub_s);
-  output(s,sub_s,result);
+  char s1[20];
+  input_string(s1);
+  reverse_string(s1);
+  output(s1);
   return 0;
 }

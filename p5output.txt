@@ -1012,3 +1012,787 @@ main () at p5original.c:52
 53  }
 (gdb) c
 Continuing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ gcc -g p1original.c
+/tmp/ccsIR8Mf.o: In function `erotosthenes_sieves':
+/home/runner/Test2Session1-24/p1original.c:20: undefined reference to `sqrt'
+collect2: error: ld returned 1 exit status
+ gcc -g p1original.c -lm
+ ./a.out
+Enter the Limit to Find the Prime Number 
+50
+1
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x9b9: file p1original.c, line 41.
+(gdb) r p erotosthenes_sieves
+Starting program: /home/runner/Test2Session1-24/a.out p erotosthenes_sieves
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1original.c:41
+41  {
+(gdb) n
+42    int a=input_array_size();
+(gdb) s
+input_array_size () at p1original.c:4
+4   {
+(gdb) n
+6     printf("Enter the Limit to Find the Prime Number \n");
+(gdb) n
+Enter the Limit to Find the Prime Number 
+7     scanf("%d",&n);
+(gdb) n
+50
+8     return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p1original.c:43
+43    int p[a];
+(gdb) n
+44    init_array(a,p);
+(gdb) s
+init_array (n=50, a=0x7ffd288f9480) at p1original.c:12
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) p i
+$1 = 0
+(gdb) p a[0]
+$2 = -883554112
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) p a[0]
+$3 = 0
+(gdb) n
+13      a[i]=i;
+(gdb) p i
+$4 = 1
+(gdb) p a[1]
+$5 = 32575
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) p a[1]
+$6 = 1
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) 
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) np i
+Undefined command: "np".  Try "help".
+(gdb) p i
+$7 = 32
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) 
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) p i
+$8 = 39
+(gdb) 
+$9 = 39
+(gdb) 
+$10 = 39
+(gdb) 
+$11 = 39
+(gdb) 
+$12 = 39
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) 
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) 
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) p i
+$13 = 42
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) 
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) 
+12    for(i=0;i<n;i++)
+(gdb) 
+13      a[i]=i;
+(gdb) p i
+$14 = 45
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) p i
+$15 = 46
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) p i
+$16 = 48
+(gdb) n
+13      a[i]=i;
+(gdb) n
+12    for(i=0;i<n;i++)
+(gdb) p i
+$17 = 49
+(gdb) n
+16  }
+(gdb) p i
+$18 = 50
+(gdb) n
+main () at p1original.c:45
+45    erotosthenes_sieves(a,p);
+(gdb) s
+erotosthenes_sieves (n=50, a=0x7ffd288f9480) at p1original.c:19
+19    int i=2;;
+(gdb) n
+20    while(i<sqrt(n))
+(gdb) p i
+$19 = 2
+(gdb) p sqrt(n)
+$20 = 7.0710678118654755
+(gdb) n
+22        while(a[i]==0)
+(gdb) p a[1]
+$21 = 1
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p j
+$22 = 50
+(gdb) n
+26                a[j]=0;
+(gdb) p *a
+$23 = 0
+(gdb) p i
+$24 = 2
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p j
+$25 = 4
+(gdb)  p n
+$26 = 50
+(gdb) p i
+$27 = 2
+(gdb) n
+26                a[j]=0;
+(gdb) p *a
+$28 = 0
+(gdb) p a[4]
+$29 = 0
+(gdb) p a[3]
+$30 = 3
+(gdb) p a[2]
+$31 = 2
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p j
+$32 = 6
+(gdb) p i
+$33 = 2
+(gdb) n
+26                a[j]=0;
+(gdb) p a[4]
+$34 = 0
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) pa[5]
+Ambiguous command "pa[5]": .
+(gdb) p a[5]
+$35 = 5
+(gdb) p a[6]
+$36 = 0
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p i
+$37 = 2
+(gdb) p j
+$38 = 10
+(gdb) n
+26                a[j]=0;
+(gdb) p a[7]
+$39 = 7
+(gdb) p a[8]
+$40 = 0
+(gdb) p a[9]
+$41 = 9
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p i
+$42 = 2
+(gdb) p j
+$43 = 12
+(gdb) p a[9]
+$44 = 9
+(gdb) n
+26                a[j]=0;
+(gdb) p a[9]
+$45 = 9
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p a[8]
+$46 = 0
+(gdb) p a[9]
+$47 = 9
+(gdb) n
+26                a[j]=0;
+(gdb) p a[9]
+$48 = 9
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p j
+$49 = 16
+(gdb) p i
+$50 = 2
+(gdb) p a[11]
+$51 = 11
+(gdb) p a[12]
+$52 = 0
+(gdb) p a[13]
+$53 = 13
+(gdb) p a[13]
+$54 = 13
+(gdb) p a[14]
+$55 = 0
+(gdb) p a[15]
+$56 = 15
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p j
+$57 = 18
+(gdb) p a[14]
+$58 = 0
+(gdb) 
+$59 = 0
+(gdb) 
+$60 = 0
+(gdb) 
+$61 = 0
+(gdb) 
+$62 = 0
+(gdb) 
+$63 = 0
+(gdb) 
+$64 = 0
+(gdb) n
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) p j
+$65 = 32
+(gdb) 
+$66 = 32
+(gdb) 
+$67 = 32
+(gdb) 
+$68 = 32
+(gdb) 
+$69 = 32
+(gdb) 
+$70 = 32
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p j
+$71 = 40
+(gdb) p i
+$72 = 2
+(gdb) p *a@j
+$73 = {0, 1, 2, 3, 0, 5, 0, 7, 0, 9, 0, 11, 0, 13, 0, 15, 0, 17, 0, 
+  19, 0, 21, 0, 23, 0, 25, 0, 27, 0, 29, 0, 31, 0, 33, 0, 35, 0, 37, 
+  0, 39}
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) 
+Undefined command: "nn".  Try "help".
+(gdb) n
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+28            i++;
+(gdb) 
+20    while(i<sqrt(n))
+(gdb) 
+22        while(a[i]==0)
+(gdb) p i
+$74 = 3
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) np *a@j
+Undefined command: "np".  Try "help".
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p *a@j
+$75 = {0, 1, 2, 3, 0, 5, 0, 7, 0, 0, 0, 11, 0, 13, 0, 0, 0, 17}
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) p *a@j
+$76 = {0, 1, 2, 3, 0, 5, 0, 7, 0, 0, 0, 11, 0, 13, 0, 0, 0, 17, 0, 19, 
+  0, 0, 0, 23, 0, 25, 0, 0, 0, 29, 0, 31, 0, 0, 0, 35, 0, 37, 0, 0, 0, 
+  41, 0, 43, 0, 0, 0, 47}
+(gdb) n
+28            i++;
+(gdb) p i
+$77 = 3
+(gdb) n
+20    while(i<sqrt(n))
+(gdb) p i
+$78 = 4
+(gdb) n
+22        while(a[i]==0)
+(gdb) 
+23          i++;
+(gdb) 
+22        while(a[i]==0)
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+28            i++;
+(gdb) 
+20    while(i<sqrt(n))
+(gdb) 
+22        while(a[i]==0)
+(gdb) p *a@j
+No symbol "j" in current context.
+(gdb) n
+23          i++;
+(gdb) p*a@j
+No symbol "j" in current context.
+(gdb) n
+22        while(a[i]==0)
+(gdb) p *a@i
+$79 = {0, 1, 2, 3, 0, 5, 0}
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) p *a@j
+$80 = {0, 1, 2, 3, 0, 5, 0, 7, 0, 0, 0, 11, 0, 13, 0, 0, 0, 17, 0, 19, 
+  0}
+(gdb) p i
+$81 = 7
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) 
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) 
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+26                a[j]=0;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+24            for(int j=i+i;j<n;j=j+i)
+(gdb) n
+28            i++;
+(gdb) n
+20    while(i<sqrt(n))
+(gdb) np *a@j
+Undefined command: "np".  Try "help".
+(gdb) p *a@j
+No symbol "j" in current context.
+(gdb) n
+30  }
+(gdb) n
+main () at p1original.c:46
+46    output(a,p);
+(gdb) n
+1
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+
+47    return 0;
+(gdb) n
+48  }(gdb) n
+__libc_start_main (main=0x5638af4009a8 <main>, argc=3, 
+    argv=0x7ffd288f9688, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7ffd288f9678)
+    at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) c
+Continuing.
