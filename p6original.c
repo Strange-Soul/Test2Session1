@@ -10,10 +10,10 @@ void input_strings(char *string,char *substring)
 }
 int str_index(char *string,char *substring)
 {
-  int i,j,value;
-  for(i=0;string[i]!='\0';)
+  int i=0,j=0,value;
+  while(string[i]!='\0')
     {
-      for(j=0;substring[j]!='\0';)
+      while(substring[j]!='\0')
         {
           if(substring[j]==string[i])
           {
