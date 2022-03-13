@@ -46,6 +46,5 @@ int main()
   l=input_line();
   find_length(&l);
   output(&l);
-  
-  
+  return 0;
 }
