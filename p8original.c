@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<math.h>
 struct _point
 {
@@ -65,7 +65,7 @@ void input_polygon(int n,Polygon *p)
 for(int i=0;i<n;i++)
   l->distance=sqrt(pow((p2.x-p1.y),2)+pow(p2.y-p1.y),2);
 }*/
-void find_perimeter(int n,Polygon *p)
+/*void find_perimeter(int n,Polygon *p)
 {
  p->perimeter =0;
   for(int i=0;i<n;i++)
@@ -90,4 +90,46 @@ int main()
   output(p);
   }
   return 0;
+}*/
+
+
+
+#include<stdio.h>
+
+struct _point
+{
+ float x,y;
+};
+typedef struct _point Point;
+
+struct _line
+{
+ Point p1,p2;
+ float distance;
+};
+typedef struct _line Line;
+
+struct _polygon
+[
+ int n;
+Line[100];
+float perimeter;
+];
+typedef struct _polygon Poly;
+
+
+int input_n()
+{
+  int n;
+  printf("Enter the  number of Sides \n");
+  scanf("%d",&n);
+  return n;
 }
+int input_polygon(int n,Polygon *p)
+{
+  Poly num=
+}
+
+
+
+

@@ -55,7 +55,7 @@ int main()
 
 
 
-#include<stdio.h>
+/*#include<stdio.h>
 
 
 int input_array_size()
@@ -104,6 +104,55 @@ int main()
   int p[n];
   init_array(n,p);
   erotosthenes_sieve(n,p);
+  output(n,p);
+  return 0;
+}*/
+
+
+
+//1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,____________
+#include<stdio.h>
+#include<math.h>
+int input_array_size()
+{
+  int n;
+  printf("Enter the size of Array \n");
+  scanf("%d",&n);
+  return n;
+}
+void init_array(int n,int a[n])
+{
+  for(int i=0;i<n;i++)
+    a[i]=i;
+}
+void erotosthenes_sieves(int n,int a[n])
+{
+  int j,i=2;
+  while(i<sqrt(n))
+    {
+      while(a[i]==0)
+        i++;
+      for(j=i+i;j<n;j+=i)
+        {
+          a[j]=0;
+            a[1]=0;
+        }
+      i++;
+    }
+}
+void output(int n,int a[n])
+{ for(int i=0;i<n;i++)
+  {
+   if(a[i]!='\0')
+     printf("%d \n",a[i]);
+  }
+}
+int main()
+{
+  int n=input_array_size();
+  int p[n];
+  init_array(n,p);
+  erotosthenes_sieves(n,p);
   output(n,p);
   return 0;
 }
