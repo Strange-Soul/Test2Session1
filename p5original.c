@@ -1,34 +1,28 @@
 #include<stdio.h>
-#include<math.h>
-
-
 int input_array_size()
 {
   int n;
-  printf("Enter the size of array \n");
+  printf("Enter the size of Array \n");
   scanf("%d",&n);
   return n;
 }
-void init_array(int n, int a[n])
+void init_array(int n, int a[n]
 {
-  for(int i=0;i<n;i++)
-    a[i]=i;
-
+  for(int i=0;i,n;i++)
+  {
+    a[i]=0;
+  }
 }
-void erotosthenes_sieves(int n, int a[n])
+void erotosthenes_sieve(int n, int a[n])
 {
-  int i=2;////bec a[0]=0 & a[1]=0 bec not prime
-  while(i<sqrt(n))
+  int i,j;
+  for(i=0;i<n;i++)
     {
-      while(a[i]==0)
-        i++;
-      for(int j=i+i;j<n;j+=i)
+      for(j=2;j<n;j++)
         {
-          a[j]=0;
-          a[0]=0;
-          a[1]=0;
+          if(a[i]%2==0)
+            a[i]=0;
         }
-      i++;
     }
 }
 void out_put(int n, int a[n])
@@ -36,7 +30,9 @@ void out_put(int n, int a[n])
   for(int i=0;i<n;i++)
     {
       if(a[i]!=0)
+      {
         printf("%d \t",a[i]);
+      }
     }
 }
 int main()
@@ -44,9 +40,7 @@ int main()
   int n=input_array_size();
   int p[n];
   init_array(n,p);
-  erotosthenes_sieves(n,p);
-  out_put(n,p);
+  erotosthenes_sieve(n,p);
+  output(n,p);
   return 0;
 }
-
-
